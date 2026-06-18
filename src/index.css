@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Quicksand", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Redefine slate: Crisp cloud blue / friendly slate for kids */
+  --color-slate-50: #F8FAFC;       /* Soft sky wash background */
+  --color-slate-75: #F1F5F9;       /* Light cloud shadow */
+  --color-slate-100: #F1F5F9;      /* Cool white-gray */
+  --color-slate-200: #E2E8F0;      /* Boundary colors */
+  --color-slate-300: #CBD5E1;      /* Borders */
+  --color-slate-400: #94A3B8;      /* Text */
+  --color-slate-500: #64748B;      /* Text */
+  --color-slate-600: #475569;      /* Text */
+  --color-slate-700: #334155;      /* Deep contrast text */
+  --color-slate-800: #1E293B;      /* Rich dark slate for ultra legibility */
+  --color-slate-900: #0F172A;      /* Deep focus contrast */
+
+  /* Redefine sky to standard cheerful Sky Blue */
+  --color-sky-50: #F0F9FF;
+  --color-sky-100: #E0F2FE;
+  --color-sky-150: #BAE6FD;
+  --color-sky-200: #7DD3FC;
+  --color-sky-305: #38BDF8;
+  --color-sky-400: #0284C7;
+  --color-sky-500: #0EA5E9;
+  --color-sky-600: #0284C7;
+  --color-sky-850: #0369A1;
+  --color-sky-950: #0C4A6E;
+
+  /* Redefine amber to cheerful Sunny Amber / Gold */
+  --color-amber-50: #FFFDF0;
+  --color-amber-100: #FEF08A;
+  --color-amber-200: #FDE047;
+  --color-amber-300: #FACC15;
+  --color-amber-400: #EAB308;
+  --color-amber-500: #F59E0B;
+  --color-amber-600: #D97706;
+  --color-amber-700: #B45309;
+  --color-amber-850: #78350F;
+  --color-amber-950: #451A03;
+
+  /* Redefine indigo to standard cheerful Royal Playful Indigo */
+  --color-indigo-50: #EEF2FF;
+  --color-indigo-100: #E0E7FF;
+  --color-indigo-150: #C7D2FE;
+  --color-indigo-200: #A5B4FC;
+  --color-indigo-500: #6366F1;
+  --color-indigo-55: #4F46E5;
+  --color-indigo-600: #4F46E5;
+  --color-indigo-700: #4338CA;
+  --color-indigo-805: #3730A3;
+  --color-indigo-800: #3730A3;
+  --color-indigo-950: #1E1B4B;
+
+  /* Redefine emerald to standard cheerful Meadow Green */
+  --color-emerald-50: #F0FDF4;
+  --color-emerald-100: #DCFCE7;
+  --color-emerald-200: #BBF7D0;
+  --color-emerald-300: #86EFAC;
+  --color-emerald-400: #4ADE80;
+  --color-emerald-500: #22C55E;
+  --color-emerald-600: #16A34A;
+  --color-emerald-850: #166534;
+
+  /* Redefine purple to cheerful Bubblegum/Grape Purple */
+  --color-purple-50: #FDF4FF;
+  --color-purple-100: #FAE8FF;
+  --color-purple-200: #F5D0FE;
+  --color-purple-300: #F0ABFC;
+  --color-purple-500: #D946EF;
+  --color-purple-550: #C084FC;
+  --color-purple-850: #701A75;
+
+  /* Redefine blue to standard cheerful Ocean Blue */
+  --color-blue-50: #EFF6FF;
+  --color-blue-105: #DBEAFE;
+  --color-blue-100: #DBEAFE;
+  --color-blue-200: #BFDBFE;
+  --color-blue-300: #93C5FD;
+  --color-blue-500: #3B82F6;
+  --color-blue-600: #2563EB;
+  --color-blue-800: #1E40AF;
+  --color-blue-855: #172554;
+
+  /* Redefine teal to standard cheerful Candy Teal */
+  --color-teal-50: #F0FDFA;
+  --color-teal-100: #CCFBF1;
+  --color-teal-200: #99F6E4;
+  --color-teal-300: #5EEAD4;
+  --color-teal-450: #2DD4BF;
+  --color-teal-500: #14B8A6;
+  --color-teal-850: #115E59;
+
+  /* Redefine rose/red to standard cheerful Strawberry Red */
+  --color-rose-50: #FFF5F5;
+  --color-rose-100: #FFE4E6;
+  --color-rose-250: #FECDD3;
+  --color-rose-400: #FB7185;
+  --color-rose-500: #F43F5E;
+  --color-rose-600: #E11D48;
+  --color-rose-700: #BE123C;
+}
+
+/* Custom visual styles for children phonics cards */
+.dashed-card {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.02), 0 2px 4px -2px rgb(0 0 0 / 0.02);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(203, 213, 225, 0.4);
+  border-radius: 9999px;
+}
+
+.animate-spin-slow {
+  animation: spin 8s linear infinite;
+}
+
+.animate-ping-slow {
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Bento theme dimensional styling matching Kid-Friendly Rainbow */
+.bento-border-sky {
+  border-bottom: 8px solid #7DD3FC; /* Light Blue shadow */
+}
+.bento-border-red {
+  border-bottom: 8px solid #F43F5E; /* Strawberry Red shadow */
+}
+.bento-border-yellow {
+  border-bottom: 8px solid #FACC15; /* Golden Yellow shadow */
+}
+.bento-border-emerald {
+  border-bottom: 8px solid #10B981; /* Fresh Green shadow */
+}
+.bento-border-indigo {
+  border-bottom: 8px solid #4F46E5; /* Playful Indigo shadow */
+}
+.bento-border-orange {
+  border-bottom: 8px solid #F97316; /* Cheerful Orange shadow */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Kid-Friendly Rainbow Cloud & Sunshine Classroom Theme Override */
+body {
+  background-color: #F0F9FF !important; /* Standard base: soft beautiful sky-blue */
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(254, 240, 138, 0.45) 0px, transparent 40%), /* Sunshine Yellow top-left */
+    radial-gradient(at 100% 0%, rgba(253, 164, 175, 0.35) 0px, transparent 40%), /* Cotton Candy Pink top-right */
+    radial-gradient(at 100% 100%, rgba(196, 181, 253, 0.3) 0px, transparent 45%), /* Cozy Lavender bottom-right */
+    radial-gradient(at 0% 100%, rgba(134, 239, 172, 0.25) 0px, transparent 45%) !important; /* Soft Grass Green bottom-left */
+  background-attachment: fixed !important;
+  color: #1E293B !important;
+}
+
+/* Overriding default light blue highlights and borders in NavigationSidebar to match cheerful sky blue styles */
+[id^="sidebar-grp-btn-"].bg-\[\#E3F2FD\],
+#sidebar-btn-advanced.bg-\[\#E3F2FD\],
+#sidebar-btn-tricky.bg-\[\#E3F2FD\],
+#sidebar-btn-certificate.bg-\[\#E3F2FD\],
+#navigation-tabs-box button.bg-sky-500,
+#custom-workspace-heading button.bg-\[\#E3F2FD\],
+#tab-content-render-stage button.bg-\[\#E3F2FD\] {
+  background-color: #E0F2FE !important; /* Soft sky blue bg */
+  border-color: #BAE6FD !important;
+  color: #0369A1 !important;            /* Playful ocean blue text */
+  border-left-width: 4px !important;
+  border-left-color: #0284C7 !important;
+  font-weight: 800 !important;
+}
+
+#navigation-tabs-box button.bg-sky-500 {
+  background-color: #0EA5E9 !important; /* Rich sky blue active tab */
+  color: #FFFFFF !important;
+  border-bottom-color: #0284C7 !important;
+}
+
+#navigation-tabs-box button.bg-amber-500 {
+  background-color: #F59E0B !important; /* Cheerful bright Gold active tab */
+  color: #FFFFFF !important;
+  border-bottom-color: #D97706 !important;
+}
+
+#navigation-tabs-box button.bg-emerald-500 {
+  background-color: #10B981 !important; /* Fresh bright green active tab */
+  color: #FFFFFF !important;
+  border-bottom-color: #047857 !important;
+}
+
+#navigation-tabs-box button.bg-indigo-600 {
+  background-color: #6366F1 !important; /* Playful bright Indigo active tab */
+  color: #FFFFFF !important;
+  border-bottom-color: #4338CA !important;
+}
+
+/* Fix any bright hover effects */
+.hover\:bg-\[\#F5F9FF\]:hover {
+  background-color: #EFF6FF !important;
+}
+.hover\:bg-[#F5F9FF]:hover {
+  background-color: #EFF6FF !important;
+}
+.hover\:bg-sky-150:hover {
+  background-color: #DBEAFE !important;
+}
+
+/* Ensure progress bar background contrast is excellent */
+.bg-slate-100 {
+  background-color: #F1F5F9 !important;
+}
+
+/* Sound Board memory guide section */
+.bg-indigo-50\/60 {
+  background-color: rgba(238, 242, 255, 0.6) !important;
+}
+
+.border-indigo-100\/50 {
+  border-color: rgba(224, 231, 255, 0.5) !important;
+}
+
+
